@@ -24,7 +24,7 @@
 ## Feedback: neiljohn@microsoft.com
 
 # User Defined variables
-weburl="https://dl.google.com/chrome/mac/stable//googlechrome.dmg"              # What is the Azure Blob Storage URL?
+weburl="https://dl.google.com/chrome/mac/stable/accept_tos%3Dhttps%253A%252F%252Fwww.google.com%252Fintl%252Fen_ph%252Fchrome%252Fterms%252F%26_and_accept_tos%3Dhttps%253A%252F%252Fpolicies.google.com%252Fterms/googlechrome.pkg"              # What is the Azure Blob Storage URL?
 appname="Google Chrome"                                                        # The name of our App deployment script (also used for Octory monitor)
 app="Google Chrome.app"                                                        # The actual name of our App once installed
 logandmetadir="/Library/Logs/Microsoft/IntuneScripts/GoogleChrome"             # The location of our logs and last updated data
