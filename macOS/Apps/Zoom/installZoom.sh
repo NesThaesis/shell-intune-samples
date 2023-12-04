@@ -18,7 +18,16 @@
 ## Feedback: neiljohn@microsoft.com
 
 # User Defined variables
-weburl="https://zoom.us/client/latest/ZoomInstallerIT.pkg"                  # What is the Azure Blob Storage URL?
+# Download the correct version, based on the cpu tpye.
+processor=$(/usr/sbin/sysctl -n machdep.cpu.brand_string)
+    if [[ "$processor" == *"Intel"* ]]; then
+        weburl="https://zoom.us/client/5.16.10.25689/zoomusInstallerFull.pkg" # What is the Azure Blob Storage URL?
+    else
+
+        weburl="https://zoom.us/client/5.16.10.25689/zoomusInstallerFull.pkg?archType=arm64" # What is the Azure Blob Storage URL?     
+    fi
+    
+    
 appname="Zoom"                                                              # The name of our App deployment script (also used for Octory monitor)
 app="zoom.us.app"                                                           # The actual name of our App once installed
 logandmetadir="/Library/Logs/Microsoft/IntuneScripts/installZoom"           # The location of our logs and last updated data
